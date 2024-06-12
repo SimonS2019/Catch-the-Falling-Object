@@ -1,0 +1,59 @@
+#gameArea {
+    position: relative;
+    height: 80vh;
+    /* full height of the viewport minus 30px */
+    width: 100vw;
+    /* full width of the viewport */
+    border: 1px solid black;
+    background-image: url('assets/sky.jpg');
+    background-size: cover;
+    /* This will make sure the image covers the whole game area */
+}
+
+.object {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    border: 1px solid black;
+    background-image: url('assets/12.png');
+    background-size: cover;
+}
+
+.platform {
+    position: absolute;
+    bottom: 0px;
+    height: 100px;
+    width: 100px;
+    border: 1px solid black;
+    background-image: url('assets/bubu.png');
+    background-size: cover;
+}
+
+.scoreAndRestart {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.buttonContainer {
+    display: flex;
+    justify-content: center;
+    gap: 200px;
+    /* optional: adds some space between the buttons */
+}
+
+.arrowBtn {
+    background-color: transparent;
+    /* Makes the button background transparent */
+    border: none;
+    /* Removes the default button border */
+    cursor: pointer;
+    /* Changes the cursor to a hand when hovering over the button */
+}
+
+.arrowBtn img {
+    width: 100px;
+    /* Sets the width of the arrow image */
+    height: 100px;
+    /* Sets the height of the arrow image */
+}
