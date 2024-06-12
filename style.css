@@ -2,7 +2,7 @@
     position: relative;
     height: 80vh;
     /* full height of the viewport minus 30px */
-    width: 100vw;
+    width: 90vw;
     /* full width of the viewport */
     border: 1px solid black;
     background-image: url('assets/sky.jpg');
@@ -30,12 +30,14 @@
 }
 
 .scoreAndRestart {
+    height: 5vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 .buttonContainer {
+    height: 10vh;
     display: flex;
     justify-content: center;
     gap: 200px;
