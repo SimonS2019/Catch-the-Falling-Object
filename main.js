@@ -9,11 +9,11 @@ var moveLeftButton = document.getElementById('moveLeftButton');
 var moveRightButton = document.getElementById('moveRightButton');
 
 moveLeftButton.addEventListener('touchstart', function() {
-    platform.style.left = Math.max(0, platform.offsetLeft - 10) + 'px';
+    platform.style.left = Math.max(0, platform.offsetLeft - 50) + 'px';
 });
 
 moveRightButton.addEventListener('touchstart', function() {
-    platform.style.left = Math.min(gameArea.offsetWidth - platform.offsetWidth, platform.offsetLeft + 10) + 'px';
+    platform.style.left = Math.min(gameArea.offsetWidth - platform.offsetWidth, platform.offsetLeft + 50) + 'px';
 });
 
 function resetObject() {
@@ -23,7 +23,7 @@ function resetObject() {
     object.style.left = newLeft + 'px';
     clearInterval(fallingInterval);
     fallingInterval = setInterval(function() {
-        object.style.top = (object.offsetTop + 1) + 'px';
+        object.style.top = (object.offsetTop + 5) + 'px';
         if (object.offsetTop + object.offsetHeight > gameArea.offsetHeight) {
             clearInterval(fallingInterval);
             if (object.offsetLeft < platform.offsetLeft + platform.offsetWidth &&
@@ -46,9 +46,9 @@ restartButton.addEventListener('click', function() {
 
 document.addEventListener('keydown', function(e) {
     if (e.key === 'ArrowLeft') {
-        platform.style.left = Math.max(0, platform.offsetLeft - 10) + 'px';
+        platform.style.left = Math.max(0, platform.offsetLeft - 50) + 'px';
     } else if (e.key === 'ArrowRight') {
-        platform.style.left = Math.min(gameArea.offsetWidth - platform.offsetWidth, platform.offsetLeft + 10) + 'px';
+        platform.style.left = Math.min(gameArea.offsetWidth - platform.offsetWidth, platform.offsetLeft + 50) + 'px';
     }
 });
 
